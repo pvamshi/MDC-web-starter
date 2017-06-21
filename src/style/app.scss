@@ -1,8 +1,16 @@
 // styles in src/style directory are applied to the whole page
 body {
-    background: #0147A7;
-    color: #fff;
+    // background: #0147A7;
+    // color: #fff;
 }
 a {
-    color: #03A9F4;
+    // color: #03A9F4;
 }
+$mdc-theme-primary: #002D72;
+$mdc-theme-accent: #f98710;
+$mdc-theme-background: #fff;
+
+// @import "material-components-web/material-components-web";
+
+@import "~@material/theme/mdc-theme.scss";
+// @import '@material/card/mdc-card';

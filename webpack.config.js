@@ -120,7 +120,8 @@ module.exports = function makeWebpackConfig() {
       {
         test: /\.(scss|sass)$/,
         exclude: root('src', 'app'),
-        loader: isTest ? 'null-loader' : ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'postcss-loader', 'sass-loader']})
+        loader: isTest ? 'null-loader' : ExtractTextPlugin.extract(
+          { fallback: 'style-loader', use: ['css-loader', 'postcss-loader', 'sass-loader']})
       },
       // all css required in src/app files will be merged in js files
       {test: /\.(scss|sass)$/, exclude: root('src', 'style'), loader: 'raw-loader!postcss-loader!sass-loader'},
@@ -190,7 +191,11 @@ module.exports = function makeWebpackConfig() {
          * Transforms .scss files to .css
          */
         sassLoader: {
-          //includePaths: [path.resolve(__dirname, "node_modules/foundation-sites/scss")]
+          includePaths: [
+            path.resolve(__dirname, "node_modules"),
+            path.resolve(__dirname, "node_modules/@material/**/*")
+
+          ]
         },
         /**
          * PostCSS

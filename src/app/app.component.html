@@ -6,8 +6,8 @@
 </header>
 <main>
   <h1>Hello from {{title}}!</h1>
-
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
+<button mdc-button [primary]="true" [raised]="true">Primary and Raised</button>
+<button mdc-button [accent]="true" [raised]="true">Accent and Raised</button>  <!-- Images (and assets) are parsed and loaded from within the public directory -->
   <img src="/img/angular.png">
 
   <router-outlet></router-outlet>

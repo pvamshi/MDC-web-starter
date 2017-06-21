@@ -25,6 +25,7 @@
     "postinstall": "npm run webdriver-update"
   },
   "dependencies": {
+    "@angular-mdc/web": "^0.1.15",
     "@angular/common": "4.0.0",
     "@angular/compiler": "4.0.0",
     "@angular/core": "4.0.0",
